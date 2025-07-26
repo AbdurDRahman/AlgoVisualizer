@@ -19,4 +19,5 @@ def main():
     gen = bubbleSort(arr)
     for it in gen :
         print(it)
-main()
+if __name__ == "__main__":
+    main()

@@ -45,4 +45,5 @@ def main():
     
     print(arr)
 
-main()
+if __name__ == "__main__":
+    main()

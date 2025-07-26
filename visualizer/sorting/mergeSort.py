@@ -1,9 +1,11 @@
 def mergeSort(arr):
+    
     if len(arr) <= 1:
         yield arr
         return
 
     yield arr
+    
     mid = len(arr) // 2
     left = arr[:mid]
     right = arr[mid:]
@@ -15,10 +17,14 @@ def mergeSort(arr):
     l_count = r_count = 0
    
     while l_count < len(left) and r_count < len(right):
+        
         if left[l_count] < right[r_count]:
+        
             merged.append(left[l_count])
             l_count += 1
+        
         else:
+       
             merged.append(right[r_count])
             r_count += 1
 
@@ -38,6 +44,7 @@ def main():
     gen = mergeSort(arr)
     for i in gen :
         print(i)
-main()
 
+if __name__ == "__main__":
+    main()
         

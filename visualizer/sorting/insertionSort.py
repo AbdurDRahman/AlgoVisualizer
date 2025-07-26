@@ -20,4 +20,5 @@ def main():
     gen = insertionSort([10,4,3,7,6,3,2,1,0])
     for i in gen :
         print(i)
-main()
+if __name__ == "__main__":
+    main()
