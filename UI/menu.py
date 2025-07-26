@@ -6,9 +6,8 @@ from .functions import *
 import pygame 
 
 
-def render_main_menu():
+def render_main_menu(screen):
     
-    pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
     pygame.display.set_caption("Algorithm Visualizer")
     
