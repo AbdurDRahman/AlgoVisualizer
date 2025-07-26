@@ -4,13 +4,13 @@ def bubbleSort(arr):
 
         for j in range(len(arr)-1):
 
-            yield arr , j , j+1
         
             if(arr[j] > arr[j+1]):
+                yield arr , arr[j] , arr[j+1]
                 arr[j] , arr[j+1] = arr[j+1] , arr[j]
+                yield arr, arr[j],arr[j+1]
                 change += 1 
             
-            yield arr, j,j+1
 
         if (change == 0) : break 
         change = 0
