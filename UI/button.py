@@ -12,8 +12,10 @@ class Button:
 
     def draw(self , screen):
         
-        if self.border_color is None : pygame.draw.rect(screen , self.background_color , self.rect)
-        else:   pygame.draw.rect(screen, self.border_color, self.rect, 2)
+        pygame.draw.rect(screen , self.background_color , self.rect)
+        
+        if self.border_color is not None:   pygame.draw.rect(screen, self.border_color, self.rect, 2)
+        
         text_surf = self.font.render(self.text, True, self.text_color)
         text_rect = text_surf.get_rect(center=self.rect.center)
         screen.blit(text_surf, text_rect)
@@ -23,3 +25,15 @@ class Button:
 
     def changeText(self,text):
         self.text = text 
+    
+    def change_x(self,x):
+        self.x  = x 
+    
+    def change_y(self,y):
+        self.y = y  
+    
+    def get_x(self):
+        return self.x
+    
+    def get_y(self):
+        return self.y

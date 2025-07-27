@@ -4,7 +4,7 @@ def insertionSort(arr):
         j = i - 1  
         key = arr[i]
         
-        yield arr , key
+        yield j , i
 
         while(j >= 0  and (arr[j] > key) ):
     
@@ -12,7 +12,7 @@ def insertionSort(arr):
             j = j - 1 
     
         arr[j+1] = key 
-        yield arr, key 
+        yield j+1, i 
 
         
 

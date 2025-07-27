@@ -1,7 +1,7 @@
 import pygame 
 from .button import * 
 import random
-from .UIconstants import ELEMENT_SPACING
+from .UIconstants import ELEMENT_SPACING , ARRAY
 class ListDisplay:
     def __init__(self, data, x, y, box_width, box_height, font, bg_color, text_color, border_color):
         self.data = data
@@ -33,6 +33,11 @@ class ListDisplay:
             if button.is_clicked(pos):
                 return i
         return None
+    
     def generate_arr(self):
         for i in range(len(self.data)):
             self.data[i] = random.randint(0,20)
+    
+    def getButtons(self):
+        return self.buttons
+

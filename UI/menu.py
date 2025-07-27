@@ -2,13 +2,11 @@ from .button import *
 from .list_display import * 
 from .draw_down_menu import * 
 from .UIconstants import *
-from .functions import *
 import pygame 
 
 
 def render_main_menu(screen):
     
-    screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
     pygame.display.set_caption("Algorithm Visualizer")
     
     dropdown_font = pygame.font.Font(None,DROP_DOWN_FONT_SIZE)
@@ -35,34 +33,31 @@ def render_main_menu(screen):
         button_font ,GEN_ARR_BG_COLOR , GEN_ARR_TEXT_COLOR
         )
     
-    clock = pygame.time.Clock()
-    running = True 
+    return list_display , dropdown , generate_arr_button 
+    
+def render_next_button(screen):
+    button_font = pygame.font.Font(None, NEXT_BUT_FONT_SIZE)
+    
+    next_button = Button(
+        NEXT_BUT_COORDINATES[0], NEXT_BUT_COORDINATES[1],
+        NEXT_BUT_WIDTH, NEXT_BUT_HEIGHT, NEXT_BUT_TEXT,
+        button_font, NEXT_BUT_BG_COLOR, NEXT_BUT_TEXT_COLOR,
+        NEXT_BUT_BORDER_COLOR
+    )
+    
+    return next_button
 
-    while running :
-        
-        screen.fill(SCREEN_COLOR)
-        list_display.draw(screen)
+def render_play_all_button(screen):
+    button_font = pygame.font.Font(None, PLAY_BUT_FONT_SIZE)
     
-        generate_arr_button.draw(screen)
-        generate_arr_button
+    play_button = Button(
+        PLAY_BUT_COORDINATES[0], PLAY_BUT_COORDINATES[1],
+        PLAY_BUT_WIDTH, PLAY_BUT_HEIGHT, PLAY_BUT_TEXT,
+        button_font, PLAY_BUT_BG_COLOR, PLAY_BUT_TEXT_COLOR,
+        PLAY_BUT_BORDER_COLOR
+    )
     
-        for event in pygame.event.get():
-    
-            if event.type == pygame.QUIT: 
-                running = False 
-    
-            if event.type == pygame.MOUSEBUTTONDOWN:
-    
-                if(generate_arr_button.is_clicked(event.pos)):
-                    list_display.generate_arr()
-            dropdown.handle_event(event)
-    
-        dropdown.draw(screen)
-    
-        pygame.display.flip()
-        clock.tick(60)
-    
-    pygame.quit()
+    return play_button
 
 if __name__ == "__main__":
     main()

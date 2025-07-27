@@ -47,4 +47,5 @@ class Dropdown:
                     self.active = False
 
     def get_selected(self):
+        if self.selected_index is None: return None 
         return self.options[self.selected_index]

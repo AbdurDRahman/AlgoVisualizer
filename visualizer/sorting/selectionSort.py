@@ -2,14 +2,15 @@ def selectionSort(arr):
     
     for i in range(len(arr)):
         min = i
-        yield arr , arr[min]
         
         for j in range (i+1,len(arr)):
             if( arr[j] < arr[min]): min = j
         
+        yield i ,min 
+       
         arr[i] , arr[min] = arr[min] , arr[i]
         
-        yield arr , arr[i]
+        yield i ,min 
 
 def main():
     
