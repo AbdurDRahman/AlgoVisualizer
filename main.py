@@ -41,13 +41,17 @@ def main():
                     revertColor(list_display.buttons)
                     
             dropdown.handle_event(event)
+           
             if dropdown.get_selected() is not None  and dropdown.active is False:
+           
                 dropdown.draw(screen)
                 algo_name = dropdown.get_selected()
                 generator = get_generator(algo_name)
                 result = performSimpleSort(screen, list_display, generate_arr_button, dropdown, clock, generator)
+            
                 if result == "quit":
                     running = False
+            
                 dropdown.selected_index = None
 
     

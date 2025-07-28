@@ -7,6 +7,7 @@ from mergeSort import performMergeSort
 from UI.menu import *
 from UI.UIconstants import (ARRAY , SCREEN_COLOR , LIST_BACKGROUND_COLOR , SORTED_LIST_COLOR)
 import pygame 
+
 def get_generator(algo_name):
     
     if algo_name == "Bubble Sort":
@@ -25,7 +26,9 @@ def get_generator(algo_name):
 def performSimpleSort(screen,list_display,generate_arr_button,dropdown,clock,generator):
     
     SORT_TYPE = str(generator.gi_code.co_name)
+   
     if SORT_TYPE == "mergeSort":
+   
         performMergeSort(screen, list_display, generate_arr_button, dropdown, clock, generator)
         sortedColor(list_display.buttons, len(list_display.buttons), SORT_TYPE)
         return 
@@ -34,6 +37,7 @@ def performSimpleSort(screen,list_display,generate_arr_button,dropdown,clock,gen
     next_button = render_next_button(screen)
     
     while True:
+        
         screen.fill(SCREEN_COLOR)
         list_display.draw(screen)
         dropdown.draw(screen)
@@ -75,16 +79,21 @@ def performSimpleSort(screen,list_display,generate_arr_button,dropdown,clock,gen
     clock.tick(60)
     
 def changeColor(buttons , i , j):
+    
     revertColorExceptBlue(buttons)
+    
     for num,button in enumerate(buttons):
+    
         if num == i or num == j:
             button.background_color = "green"
 
 def sortedColor(buttons,i,SORT_TYPE = "no need really"):
     
     for num, button in enumerate(buttons):
+        
         if num < i and (SORT_TYPE != "bubbleSort"):
             button.background_color = SORTED_LIST_COLOR
+        
         else : break 
     
     if SORT_TYPE != "bubbleSort": return 
@@ -92,14 +101,17 @@ def sortedColor(buttons,i,SORT_TYPE = "no need really"):
     check = len(ARRAY) - i
     
     for num, button in enumerate(buttons):
+        
         if num >= check and SORT_TYPE == "bubbleSort":
             button.background_color = SORTED_LIST_COLOR
         
 def revertColor(buttons):
+    
     for button in buttons:
         button.background_color = LIST_BACKGROUND_COLOR
 
 def finishSimpleSort(screen, list_display, generate_arr_button, dropdown, clock , play_button, next_button , generator):
+    
     while True:
         
         screen.fill((255, 255, 255))
@@ -120,20 +132,27 @@ def quickSortChangeColor(buttons , i , mid , j):
     revertColorExceptBlue(buttons)
 
     for num, button in enumerate(buttons):
+        
         if num < mid and num >= i:
             button.background_color = "green"
+        
         elif num == mid :
             button.background_color = "yellow"
+        
         elif num > mid and num <= j:
             button.background_color = "green"
 
 def quickSortSortedColor(buttons, i, j):
+    
     for num , button in enumerate(buttons):
+    
         if num >= i and num <= j:
             button.background_color = SORTED_LIST_COLOR
 
 def revertColorExceptBlue(buttons):
+    
     for button in buttons:
+    
         if button.background_color != SORTED_LIST_COLOR and button.background_color != "yellow":
             button.background_color = LIST_BACKGROUND_COLOR
 
