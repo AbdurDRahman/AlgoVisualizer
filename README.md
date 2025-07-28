@@ -40,6 +40,7 @@ Each sorting algorithm is implemented as a **generator function**, yielding cont
 3. **Install dependencies**
 
    ```bash
+    uv venv
     uv pip install pygame
 
 4. **Run the app**
