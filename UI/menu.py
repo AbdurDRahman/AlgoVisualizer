@@ -58,6 +58,17 @@ def render_play_all_button(screen):
     )
     
     return play_button
+def render_custom_list(arr , height_offset , width_offset):
+        
+        list_elements_font = pygame.font.Font(None ,LIST_FONT_SIZE - 10)
+        
+        custom_list = ListDisplay(
+        arr , 50 + width_offset, LIST_CORDINATES[1] + height_offset, 
+        LIST_WIDTH - 10  , LIST_HEIGHT - 10   , list_elements_font ,
+        LIST_BACKGROUND_COLOR , LIST_TEXT_COLOR ,
+        LIST_BOARDER_COLOR
+        )
+        return custom_list
 
 if __name__ == "__main__":
     main()

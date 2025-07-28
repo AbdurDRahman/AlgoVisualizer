@@ -4,15 +4,16 @@ def quickSort(arr , left = 0 , right = None):
 
     if(right == None): right = len(arr) - 1
     if(left >= right): return  
-
+    yield left , right , right , False 
+    
     partitionIndex = partition(arr , left , right)
     
-    yield left , partitionIndex , right 
+    yield left , partitionIndex , right , False 
     
     yield from quickSort(arr , left , partitionIndex - 1)
     yield from quickSort(arr , partitionIndex + 1 , right)
 
-    yield left , partitionIndex , right 
+    yield left , partitionIndex , right , True 
 
 
     

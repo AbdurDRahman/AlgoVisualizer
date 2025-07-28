@@ -1,10 +1,10 @@
 def mergeSort(arr):
     
     if len(arr) <= 1:
-        yield arr
+        yield arr , False
         return
 
-    yield arr
+    yield arr , False
     
     mid = len(arr) // 2
     left = arr[:mid]
@@ -33,17 +33,17 @@ def mergeSort(arr):
 
     arr[:len(merged)] = merged
 
-    yield arr
+    yield arr , True
 
 
 
 
 def main():
     
-    arr = [5, 4, 3, 2, 1]
+    arr = [5, 4, 3, 2, 1 , 5 , 4 , 3 , 2 , 1]
     gen = mergeSort(arr)
-    for i in gen :
-        print(i)
+    for i, it in enumerate(gen) :
+        print(i , it)
 
 if __name__ == "__main__":
     main()
