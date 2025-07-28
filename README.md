@@ -28,22 +28,32 @@ Each sorting algorithm is implemented as a **generator function**, yielding cont
 
 
 1. **Install uv**
+
+   linux
    ```bash
-   curl -Ls https://astral.sh/uv/install.sh | sh
-2. **Clone the repo**
+    curl -Ls https://astral.sh/uv/install.sh | sh
+   ```
+    Mac
+   ```bash
+   brew install astral-sh/astral/uv
+   ```
+   windows
+   ```bash
+   iwr https://astral.sh/uv/install.ps1 -useb | iex
+3. **Clone the repo**
 
     ```bash
    git clone https://github.com/AbdurDRahman/AlgoVisualizer.git
    cd AlgoVisualizer
     ```
 
-3. **Install dependencies**
+4. **Install dependencies**
 
    ```bash
     uv venv
     uv pip install pygame
 
-4. **Run the app**
+5. **Run the app**
 
    ```bash
     uv run main.py
