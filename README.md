@@ -22,6 +22,31 @@ Each sorting algorithm is implemented as a **generator function**, yielding cont
 - Python 3
 - Pygame
 
+
+## 🔧 Setup & Run
+
+### Recommended: Using [uv](https://github.com/astral-sh/uv)
+
+1. **Install uv**
+   ```bash
+   curl -Ls https://astral.sh/uv/install.sh | sh
+2. **Clone the repo**
+
+    ```bash
+   git clone https://github.com/AbdurDRahman/AlgoVisualizer.git
+   cd AlgoVisualizer
+    ```
+
+3. **Install dependencies**
+
+   ```bash
+    uv pip install pygame
+
+4. **Run the app**
+
+   ```bash
+    uv run main.py
+
 ## 📂 Project Structure
 <pre>
 
@@ -45,33 +70,5 @@ Each sorting algorithm is implemented as a **generator function**, yielding cont
         ├──  mergeSort.py
         ├──  quickSort.py
         └──  selectionSort.py
-<pre>
 
-  ---
 
-## 🔧 Setup & Run
-
-### Recommended: Using [uv](https://github.com/astral-sh/uv)
-
-1. **Install uv**
-   ```bash
-   curl -Ls https://astral.sh/uv/install.sh | sh
-Clone the repo
-
-bash
-Copy
-Edit
-git clone https://github.com/AbdurDRahman/AlgoVisualizer.git
-cd AlgoVisualizer
-Install dependencies
-
-bash
-Copy
-Edit
-uv pip install -r requirements.txt
-Run the app
-
-bash
-Copy
-Edit
-python main.py
