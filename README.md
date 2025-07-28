@@ -25,7 +25,7 @@ Each sorting algorithm is implemented as a **generator function**, yielding cont
 
 ## 🔧 Setup & Run
 
-### Recommended: Using [uv](https://github.com/astral-sh/uv)
+
 
 1. **Install uv**
    ```bash
