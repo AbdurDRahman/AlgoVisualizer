@@ -23,6 +23,8 @@ Each sorting algorithm is implemented as a **generator function**, yielding cont
 - Pygame
 
 ## 📂 Project Structure
+<pre>
+
  .
 ├──  functions.py
 ├──  main.py
@@ -43,7 +45,9 @@ Each sorting algorithm is implemented as a **generator function**, yielding cont
         ├──  mergeSort.py
         ├──  quickSort.py
         └──  selectionSort.py
----
+<pre>
+
+  ---
 
 ## 🔧 Setup & Run
 
