@@ -6,6 +6,7 @@ Algo Visualizer is a Python-based tool to visualize common sorting algorithms st
 
 - Visualizes popular sorting algorithms:
   - Bubble Sort
+  - Selection Sort
   - Insertion Sort
   - Merge Sort
   - Quick Sort
